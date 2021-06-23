@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1622326780362') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vue:before {
+  content: "\e6b9";
+}
+
+.icon-react:before {
+  content: "\e68b";
+}
+
+.icon-webpack:before {
+  content: "\ed0b";
+}
+
