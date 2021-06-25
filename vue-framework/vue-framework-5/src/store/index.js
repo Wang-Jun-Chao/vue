@@ -1,4 +1,8 @@
 import {createStore} from 'vuex'
+import getters from "@/store/getters";
+import mutations from "@/store/mutations";
+import actions from "@/store/actions";
+import user from "@/store/usermodule/user";
 
 export default createStore({
     state: {
@@ -14,51 +18,28 @@ export default createStore({
             {name: 'g', price: 70},
         ]
     },
-    getters: {
-        vxpownum(state) {
-            return state.num * state.num;
-        },
-        // totalprice(state) {
-        //     return state.cartlist.reduce((s, n) => s + n.price, 0)
+    getters: getters,
+    mutations:mutations,
+    actions: actions,
+    modules: {
+        user: user,
+        // user:{
+        //     state:{
+        //
+        //     },
+        //     actions:{
+        //
+        //     },
+        //     mutations:{
+        //
+        //     },
+        //     getters:{
+        //
+        //     }
         // },
-        goodsgt(state) {
-            return state.cartlist.filter(n => n.price > 30);
-        },
-        // totalprice(state, getters) {
-        //     return getters.goodsgt.reduce((s, n) => s + n.price, 0)
-        // },
+        article: {},
+        cart: {},
+        goods: {}
+    }
 
-        goodsself(state, getters) {
-            return function (price) {
-                return state.cartlist.filter(n => n.price > price);
-            }
-            // return state.cartlist.filter(n => n.price > " 30");
-        },
-        totalprice(state, getters) {
-            return getters.goodsgt.reduce((s, n) => s + n.price, 0)
-        },
-    },
-
-    mutations: {
-        sub(state) {
-            state.dnum -= step;
-        },
-        add(state) {
-            state.dnum += step;
-        },
-        sub2(state, step) {
-            state.dnum -= step;
-        },
-        add2(state, step) {
-            state.dnum += step;
-        },
-        sub3(state, payload) {
-            state.dnum -= payload.step + payload.num;
-        },
-        add3(state, payload) {
-            state.dnum += payload.step + payload.num;
-        }
-    },
-    actions: {},
-    modules: {}
 })
