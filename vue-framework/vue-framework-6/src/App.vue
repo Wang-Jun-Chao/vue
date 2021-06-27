@@ -7,6 +7,8 @@
         <router-link to="/setup">入口Setup</router-link>
         |
         <router-link to="/comapi">常用Api</router-link>
+        |
+        <router-link to="/computed">计算属性</router-link>
     </div>
     <router-view/>
 </template>
