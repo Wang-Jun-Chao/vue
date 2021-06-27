@@ -1,6 +1,7 @@
 <template>
     <div class="SubComp">
         这是子组件 SubComp
+        <slot>9999999999999</slot>
     </div>
 
 </template>
@@ -29,6 +30,11 @@ export default {
         console.log(this)
         console.log(props);
         console.log(props.one + props.two)
+        console.log(context.attrs.desc);
+        console.log(context.slots.default());
+
+        context.emit('myadd', '向父组件传参数')
+
     },
     beforeCreate() {
         console.log("SubComp beforCeate");
@@ -38,6 +44,9 @@ export default {
         console.log(this)
         console.log(this.msg);
         console.log(this.one + this.two)
+    },
+    methods:{
+
     }
 }
 </script>

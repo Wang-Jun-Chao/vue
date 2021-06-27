@@ -5,6 +5,8 @@
         <router-link to="/about">组合式API</router-link>
         |
         <router-link to="/setup">入口Setup</router-link>
+        |
+        <router-link to="/comapi">常用Api</router-link>
     </div>
     <router-view/>
 </template>
