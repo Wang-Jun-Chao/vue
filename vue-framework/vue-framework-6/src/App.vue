@@ -13,6 +13,8 @@
         <router-link to="/watch">监听器</router-link>
         |
         <router-link to="/lifehook">生命周期</router-link>
+        |
+        <router-link to="/rootapp">Provider/Inject</router-link>
     </div>
     <router-view/>
 </template>
