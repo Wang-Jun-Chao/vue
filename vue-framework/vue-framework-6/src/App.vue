@@ -9,6 +9,10 @@
         <router-link to="/comapi">常用Api</router-link>
         |
         <router-link to="/computed">计算属性</router-link>
+        |
+        <router-link to="/watch">监听器</router-link>
+        |
+        <router-link to="/lifehook">生命周期</router-link>
     </div>
     <router-view/>
 </template>
