@@ -15,6 +15,8 @@
         <router-link to="/lifehook">生命周期</router-link>
         |
         <router-link to="/rootapp">Provider/Inject</router-link>
+        |
+        <router-link to="/routerapi">Router Api</router-link>
     </div>
     <router-view/>
 </template>
