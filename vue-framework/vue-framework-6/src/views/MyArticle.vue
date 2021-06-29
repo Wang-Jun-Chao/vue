@@ -1,34 +1,25 @@
 <template>
     <div class="MyArticle">
         <h1>我的文章</h1>
-        <h3>{{$route.query.name}}</h3>
-        <h3>{{$route.query.keyword}}</h3>
+        <h3>{{ $route.query.name }}</h3>
+        <h3>{{ $route.query.keyword }}</h3>
     </div>
 
 </template>
 
 <script>
 import {useRoute, useRouter} from "vue-router";
-import {ref, watch} from "vue";
 
 export default {
     name: "MyArticle",
-    setup(){
+    setup() {
         const route = useRoute();
         const router = useRouter();
+        console.log(route.query.name, route.query.keyword)
 
-        // let id = route.params.id
-        // console.log(id);
-
-        // let id= ref(0)
-        // watch(()=>route.params, (newid)=>{
-        //     console.log(newid.id);
-        //     id.value = newid.id
-        // })
-        //
-        // return {
-        //     id
-        // }
+        setTimeout(() => {
+            router.push({path: "/routerapi/article", query: {name: "999", keyword: "888"}})
+        }, 5000)
     },
     components: {},
     props: {},

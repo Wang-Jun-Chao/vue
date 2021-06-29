@@ -17,6 +17,8 @@
         <router-link to="/rootapp">Provider/Inject</router-link>
         |
         <router-link to="/routerapi">Router Api</router-link>
+        |
+        <router-link to="/vuexapi">Vuex Api</router-link>
     </div>
     <router-view/>
 </template>
